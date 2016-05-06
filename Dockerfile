@@ -1,4 +1,5 @@
 FROM alpine:3.3
+MAINTAINER Igor Rudyk <rudyk.igor@gmail.com>
 
 RUN apk --update add python py-pip && \
     pip install elasticsearch-curator==3.5.0 && \
