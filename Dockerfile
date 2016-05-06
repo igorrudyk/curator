@@ -6,7 +6,7 @@ RUN apk --update add python py-pip && \
     apk del py-pip && \
     rm -rf /var/cache/apk/*
 
-ENV INTERVAL_IN_HOURS=2
+ENV INTERVAL_IN_HOURS=6
 ENV OLDER_THAN_IN_DAYS="14"
 ENV LIMIT_DISK_SPACE="20"
 ENV ES_HOST=172.19.0.100
