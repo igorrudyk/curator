@@ -7,7 +7,6 @@ docker run --restart=always -d --net elasticsearch
 -e 'INTERVAL_IN_HOURS=${CURATOR_INTERVAL_IN_HOURS}' \ 
 -e 'OLDER_THAN_IN_DAYS=${CURATOR_OLDER_THAN_IN_DAYS}' \
 -e 'LIMIT_DISK_SPACE=${CURATOR_LIMIT_DISK_SPACE}' \
-
 -e 'ES_HOST=172.19.0.100' \
 --name curator 
 igorrudyk1/curator:${CURATOR_PACKAGE_VERSION}
