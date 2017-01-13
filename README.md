@@ -3,13 +3,13 @@ This only job executed by the docker built from this repository is to clean the 
 
 It can be run as follows:
 
-docker run --restart=always -d --net elasticsearch  
+docker run --restart=always -d --log-opt max-size=256M --log-opt max-file=1
 -e 'INTERVAL_IN_HOURS=${CURATOR_INTERVAL_IN_HOURS}' \ 
 -e 'OLDER_THAN_IN_DAYS=${CURATOR_OLDER_THAN_IN_DAYS}' \
--e 'LIMIT_DISK_SPACE=${CURATOR_LIMIT_DISK_SPACE}' \
 -e 'ES_HOST=172.19.0.100' \
+-e 'ES_PORT=9200' \
 --name curator 
-igorrudyk1/curator:${CURATOR_PACKAGE_VERSION}
+igorrudyk1/curator:3.5.1
 
 
 INTERVAL_IN_HOURS: The amount of time between two curator runs
